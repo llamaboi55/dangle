@@ -63,7 +63,7 @@ Linux)
     printf '[Desktop Entry]\nName=Dangle\nComment=Little charms that hang from the top of your screen\nExec=%s\nIcon=dangle\nType=Application\nCategories=Utility;Amusement;\n' "$BIN/dangle" > "$APPS/dangle.desktop"
     say "Installed to $BIN/dangle (make sure $BIN is on your PATH)"
   fi
-  say "Done. Dangle is running. Open it again from your app menu any time."
+  say "Done. Open Dangle from your app menu to start it."
   ;;
 *) fail "this script is for macOS and Linux. On Windows, see the README." ;;
 esac
