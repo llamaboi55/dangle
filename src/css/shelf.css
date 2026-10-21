@@ -1,0 +1,44 @@
+:root {
+  --bg: #f6f3fb; --card: #ffffff; --ink: #24203a; --muted: #6d6886; --line: #e4def0; --accent: #6b4fd8; --accent-ink: #fff;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #17141f; --card: #221e2e; --ink: #f1edfb; --muted: #a59fbd; --line: #332d44; --accent: #9b84ff; --accent-ink: #160f2e; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 14px/1.45 system-ui, -apple-system, "Segoe UI", Ubuntu, sans-serif; }
+header, footer { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 24px; }
+header { border-bottom: 1px solid var(--line); }
+footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+.brand { display: flex; gap: 12px; align-items: center; }
+.brand img { border-radius: 9px; }
+h1 { margin: 0; font-size: 20px; }
+.brand p { margin: 2px 0 0; color: var(--muted); font-size: 13px; }
+main { padding: 8px 24px 16px; display: grid; gap: 8px; }
+h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin: 14px 0 10px; }
+h2 small { text-transform: none; letter-spacing: 0; font-weight: 400; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); gap: 10px; }
+.tile {
+  display: grid; justify-items: center; gap: 4px; padding: 10px 6px 8px; border-radius: 14px; border: 1px solid var(--line);
+  background: var(--card); color: inherit; font: inherit; font-size: 12px; cursor: pointer; text-align: center; transition: transform 0.12s, border-color 0.12s;
+}
+.tile:hover { transform: translateY(-2px); border-color: var(--accent); }
+.tile canvas { width: 64px; height: 64px; }
+.hanging { display: flex; flex-wrap: wrap; gap: 8px; min-height: 44px; }
+.chip { display: inline-flex; align-items: center; gap: 6px; padding: 4px 6px 4px 4px; border-radius: 999px; background: var(--card); border: 1px solid var(--line); }
+.chip canvas { width: 30px; height: 30px; }
+.chip button { border: 0; background: none; color: var(--muted); cursor: pointer; font-size: 16px; line-height: 1; padding: 2px 6px; border-radius: 999px; }
+.chip button:hover { color: var(--ink); background: var(--line); }
+.empty { color: var(--muted); align-self: center; }
+.row { display: flex; gap: 8px; margin-top: 10px; }
+.btn { border: 0; border-radius: 10px; padding: 8px 14px; background: var(--accent); color: var(--accent-ink); font: inherit; font-weight: 600; cursor: pointer; }
+.btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); font-weight: 500; }
+.settings { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px 24px; align-items: center; }
+.settings h2 { grid-column: 1 / -1; }
+.settings label { display: grid; gap: 6px; }
+.settings label.check { display: flex; align-items: center; gap: 8px; }
+input[type=range] { accent-color: var(--accent); }
+select { font: inherit; padding: 6px 8px; border-radius: 8px; border: 1px solid var(--line); background: var(--card); color: inherit; }
+.switch { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; color: var(--muted); }
+.switch input { accent-color: var(--accent); width: 18px; height: 18px; }
+kbd { font: 12px ui-monospace, monospace; padding: 1px 6px; border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 6px; background: var(--card); }

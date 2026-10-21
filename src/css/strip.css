@@ -1,0 +1,24 @@
+html, body { margin: 0; height: 100%; overflow: hidden; background: transparent; user-select: none; -webkit-user-select: none; }
+canvas { display: block; }
+body.grab canvas { cursor: grab; }
+body.dragging canvas { cursor: grabbing; }
+
+.menu {
+  position: fixed; min-width: 200px; padding: 6px; border-radius: 12px;
+  background: rgba(28, 25, 44, 0.94); color: #f4f1ff; box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  font: 13px/1.2 system-ui, -apple-system, "Segoe UI", Ubuntu, sans-serif;
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+}
+.menu button {
+  display: block; width: 100%; text-align: left; padding: 8px 10px; border: 0; border-radius: 8px;
+  background: none; color: inherit; font: inherit; cursor: pointer;
+}
+.menu button:hover, .menu button:focus-visible { background: rgba(255,255,255,0.12); outline: none; }
+.menu hr { border: 0; height: 1px; background: rgba(255,255,255,0.12); margin: 4px 6px; }
+
+/* Browser preview: pretend there's a desktop behind the strip. */
+.preview body {
+  background: linear-gradient(180deg, #1f1a33 0, #1f1a33 26px, transparent 26px),
+    radial-gradient(1200px 500px at 70% 120%, #f6b38f 0, transparent 60%),
+    linear-gradient(160deg, #8fb4e3 0%, #c5b8e8 55%, #f2c6c2 100%);
+}

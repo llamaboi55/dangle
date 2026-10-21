@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dangle</title>
+  <link rel="stylesheet" href="css/shelf.css">
+</head>
+<body>
+  <header>
+    <div class="brand"><img src="icon.png" alt="" width="36" height="36"><div><h1>Dangle</h1><p>Click a charm to hang it. Brush past them, grab and fling them, right-click for options.</p></div></div>
+    <label class="switch"><input type="checkbox" id="visible" checked><span>Showing</span></label>
+  </header>
+  <main>
+    <section>
+      <h2>Hanging now <small id="count"></small></h2>
+      <div id="hanging" class="hanging"></div>
+      <div class="row">
+        <button type="button" id="spread" class="btn">Spread them out</button>
+        <button type="button" id="clear" class="btn ghost">Take all down</button>
+      </div>
+    </section>
+    <section>
+      <h2>Charms</h2>
+      <div id="grid" class="grid"></div>
+      <input type="file" id="photo-file" accept="image/*" hidden>
+    </section>
+    <section class="settings">
+      <h2>Settings</h2>
+      <label>Charm size <input type="range" id="size" min="0.7" max="1.6" step="0.05"></label>
+      <label>How much your mouse pushes them <input type="range" id="sway" min="0" max="2.5" step="0.1"></label>
+      <label>Focus timer length
+        <select id="focus"><option value="15">15 minutes</option><option value="25">25 minutes</option><option value="45">45 minutes</option><option value="50">50 minutes</option><option value="60">60 minutes</option></select>
+      </label>
+      <label class="check"><input type="checkbox" id="sound"> Little sounds</label>
+      <label class="check"><input type="checkbox" id="autostart"> Start when my computer starts</label>
+    </section>
+  </main>
+  <footer>
+    <span>Free and open source. Hide or show the charms anywhere with <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>D</kbd>.</span>
+    <button type="button" id="quit" class="btn ghost">Quit Dangle</button>
+  </footer>
+  <script type="module" src="js/shelf.js"></script>
+</body>
+</html>
